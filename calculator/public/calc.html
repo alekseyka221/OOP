@@ -2,37 +2,38 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>AShah Calculator</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Калькулятор</h1>
-<div id="calculator" class="calculator">
+<div class="calculator" id="calculator">
 
-	<button id="clear" class="clear">C</button>
+	<button class="clear" id="clear">C</button>
 
-	<div id="viewer" class="viewer">0</div>
+	<div class="viewer" id="viewer">0</div>
 
 	<button class="num" data-num="7">7</button>
 	<button class="num" data-num="8">8</button>
 	<button class="num" data-num="9">9</button>
-	<button data-ops="plus" class="ops">+</button>
+	<button class="ops" data-ops="plus">+</button>
 
 	<button class="num" data-num="4">4</button>
 	<button class="num" data-num="5">5</button>
 	<button class="num" data-num="6">6</button>
-	<button data-ops="minus" class="ops">-</button>
+	<button class="ops" data-ops="minus">-</button>
 
 	<button class="num" data-num="1">1</button>
 	<button class="num" data-num="2">2</button>
 	<button class="num" data-num="3">3</button>
-	<button data-ops="times" class="ops">*</button>
+	<button class="ops" data-ops="multiply">*</button>
 
 	<button class="num" data-num="0">0</button>
 	<button class="num" data-num=".">.</button>
-	<button id="equals" class="equals" data-result="">=</button>
-	<button data-ops="divided by" class="ops">/</button>
+	<button class="equals" data-result="" id="equals" >=</button>
+	<button class="ops" data-ops="divided">/</button>
 </div>
 </body>
-<script src="calc.js"></script>
+<script src="calc_procedure_style.js"></script>
 </html>

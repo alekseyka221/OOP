@@ -21,7 +21,7 @@ const server = http.createServer((req:IncomingMessage, res:ServerResponse) => {
 	}
 	if(req.url.endsWith('.js'))
 	{
-		fs.readFile(path.join(__dirname,'public', 'calc.js'), ((err, data) =>
+		fs.readFile(path.join(__dirname,'public', 'calc_procedure_style.js'), ((err, data) =>
 		{
 			if(err)
 			{
@@ -35,18 +35,17 @@ const server = http.createServer((req:IncomingMessage, res:ServerResponse) => {
 	}
 	if(req.url === '/')
 	{
-		const filePath = './public/calc.html';
-		fs.access(filePath, fs.constants.R_OK,err => {
+		fs.readFile(path.join(__dirname,'public', 'calc.html'), ((err, data) =>
+		{
 			if(err)
 			{
-				res.statusCode = 404;
-				res.end("Resource not found!");
+				throw err;
 			}
-			else
-			{
-				fs.createReadStream(filePath).pipe(res);
-			}
-		});
+			res.setHeader('Content-Type', 'text/html');
+			res.statusCode = 200;
+			res.write(data);
+			res.end();
+		}))
 	}
 
 })

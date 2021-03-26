@@ -1,9 +1,23 @@
+/**
+ * получаем Node элементы из html
+ * @param {string} element - строка названия элементов
+ *
+ */
 function getNodeElements(element) {
     return document.querySelectorAll(element);
 }
+/**
+ * получаем Node элемент из html
+ * @param {string} element - строка названия элемента
+ *
+ */
 function getNodeElement(element) {
     return document.querySelector(element);
 }
+/**
+ * функция выводит на экран число которое пользователь набирает
+ *
+ */
 function setNumber() {
     if (resultNum) {
         curNum = this.getAttribute("data-num");
@@ -14,12 +28,20 @@ function setNumber() {
     }
     viewer.innerHTML = curNum;
 }
+/**
+ * функция очищает экран после нажатия на кнопку с оператором
+ *
+ */
 function moveNum() {
     oldNum = curNum;
     curNum = "";
     operator = this.getAttribute("data-ops");
     equals.setAttribute("data-result", "");
 }
+/**
+ * функция выводящая на экран результат арифметической операции
+
+ */
 function display() {
     var oldN = parseFloat(oldNum), curN = parseFloat(curNum);
     var res = 0;
@@ -30,10 +52,10 @@ function display() {
         case "minus":
             res = oldN - curN;
             break;
-        case "times":
+        case "multiply":
             res = oldN * curN;
             break;
-        case "divided by":
+        case "divided":
             res = oldN / curN;
             break;
         default:
@@ -50,20 +72,24 @@ function display() {
     oldNum = '';
     curNum = resultNum;
 }
+/**
+ * функция очищающая дисплей
+
+ */
 function clear() {
     oldNum = '';
     curNum = '';
     viewer.innerHTML = '0';
     equals.setAttribute("data-result", resultNum);
 }
-var viewer = getNodeElement("#viewer"), // Calculator screen where result is displayed
-equals = getNodeElement("#equals"), // Equal button
-nums = getNodeElements(".num"), // List of numbers
-ops = getNodeElements(".ops"), // List of operators
-curNum = "", // Current number
-oldNum = "", // First number
-resultNum, // Result
-operator; // Batman
+var viewer = getNodeElement("#viewer");
+var equals = getNodeElement("#equals");
+var nums = getNodeElements(".num");
+var ops = getNodeElements(".ops");
+var curNum = "";
+var oldNum = "";
+var resultNum = "";
+var operator = "";
 for (var i = 0; i < nums.length; i++) {
     nums[i].addEventListener("click", setNumber);
 }
@@ -72,7 +98,3 @@ for (var i = 0; i < ops.length; i++) {
 }
 equals.addEventListener("click", display);
 getNodeElement('#clear').addEventListener("click", clear);
-// getNodeElement('#reset').addEventListener("click", ()=>
-// {
-// 	window.location = window.location;
-// })
