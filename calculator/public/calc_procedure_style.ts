@@ -55,7 +55,7 @@ function display()
 {
 	const oldN: number = parseFloat(oldNum),
 		curN: number = parseFloat(curNum);
-	let res: number = 0;
+	let res: number;
 	switch (operator)
 	{
 		case "plus":
