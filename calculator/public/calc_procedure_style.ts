@@ -101,6 +101,9 @@ function clear()
 	equals.setAttribute("data-result", resultNum);
 }
 
+/*
+ * инициализируем переменные
+ */
 let viewer: Element = getNodeElement("#viewer");
 let	equals: Element = getNodeElement("#equals");
 let	nums: NodeListOf<Element> = getNodeElements(".num");
@@ -110,6 +113,9 @@ let	oldNum: string = "";
 let	resultNum: string = "";
 let	operator: string = "";
 
+/*
+* вешаем листнеры
+ */
 for (let i : number = 0; i < nums.length; i++)
 {
 	nums[i].addEventListener("click", setNumber);
