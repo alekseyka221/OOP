@@ -1,6 +1,6 @@
 html {
   background: linear-gradient(217deg, rgb(44, 4, 83), rgba(255,0,0,0)),
-  linear-gradient(120deg, rgb(42, 1, 50), rgba(0,255,0,0) ),
+  linear-gradient(120deg, rgb(26, 2, 31), rgba(0,255,0,0) ),
   linear-gradient(300deg, rgba(1, 1, 83, 0.8), rgba(0,0,255,0) );
   background-attachment: fixed;
 }
@@ -32,7 +32,6 @@ h1 {
   float: left;
   line-height: 3em;
   text-align: right;
-  text-overflow: ellipsis;
   overflow: hidden;
   width: 8em;
   height: 3em;
@@ -41,7 +40,7 @@ h1 {
 button {
   border: 0;
   outline: 0 !important;
-  background: rgba(42, 50, 113, .28);
+  background: rgb(42, 33, 83);
   color: #6cacc5;
   cursor: pointer;
   float: left;
@@ -50,6 +49,6 @@ button {
   width: 2.5em;
   height: 2.5em;
   &:hover {
-	background: #201e40;
+	background: #1b1935;
   }
 }
