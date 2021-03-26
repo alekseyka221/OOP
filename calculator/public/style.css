@@ -1,5 +1,5 @@
 html {
-  background: linear-gradient(217deg, #2c0453, rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, #560269, rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(1, 1, 83, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  background: linear-gradient(217deg, #2c0453, rgba(255, 0, 0, 0)), linear-gradient(120deg, #2a0132, rgba(0, 255, 0, 0)), linear-gradient(300deg, rgba(1, 1, 83, 0.8), rgba(0, 0, 255, 0));
   background-attachment: fixed; }
 
 body {
